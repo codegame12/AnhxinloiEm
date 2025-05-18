@@ -7,6 +7,21 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
   <title>Anh xin lỗi Em</title>
   <link rel="stylesheet" href="./style.css">
+  <style>
+.blink {
+  animation: blink 1.5s infinite;
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+</style>
+
 </head>
 
 <body>
@@ -14,8 +29,7 @@
   <h1>Anh có điều muốn nói</h1>
   <button id="playButton" onclick="generateRandomNotifications()">Nhấn đây nè</button>
   <div class="final-message" id="finalMessage" onclick="redirectToNewPage()">
-    <p id="text1"></p>
-    <p id="text2"></p>
+   <p class="blink">Anh xin lỗi 💔</p>
   </div>
   <audio id="audioPlayer" src="./Hà Anh Tuấn - Tháng Tư Là Lời Nói Dối Của Em (Official MV).mp3"></audio> 
   <script>
