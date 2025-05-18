@@ -2,45 +2,73 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Anh xin lỗi Em</title>
-  <link rel="stylesheet" href="./style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
   <style>
-.blink {
-  animation: blink 1.5s infinite;
-  color: white;
-  font-size: 32px;
-  font-weight: bold;
-  text-align: center;
-}
+    body {
+      background-color: black;
+      color: white;
+      font-family: 'Roboto', sans-serif;
+      text-align: center;
+      padding-top: 100px;
+    }
 
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.3; }
-}
-</style>
+    h1 {
+      font-size: 36px;
+    }
 
+    .blink {
+      animation: blink 1.5s infinite;
+      font-size: 32px;
+      font-weight: bold;
+      margin-top: 40px;
+    }
+
+    @keyframes blink {
+      0%, 100% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0.3;
+      }
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+
+    .final-message {
+      margin-top: 40px;
+    }
+  </style>
 </head>
 
 <body>
 
   <h1>Anh có điều muốn nói</h1>
-  <button id="playButton" onclick="generateRandomNotifications()">Nhấn đây nè</button>
-  <div class="final-message" id="finalMessage" onclick="redirectToNewPage()">
-   <p class="blink">Anh xin lỗi 💔</p>
-  </div>
-  <audio id="audioPlayer" src="./TBN.mp3"></audio> 
-  <script>
-    const playButton = document.getElementById("playButton");
-    const audioPlayer = document.getElementById("audioPlayer");
+  <button id="playButton">Nhấn đây nè</button>
 
-    playButton.addEventListener("click", function() {
-        audioPlayer.play();
+  <div class="final-message">
+    <p class="blink">Anh xin lỗi 💔</p>
+  </div>
+
+  <!-- Tạm thời bỏ audio để tránh lỗi -->
+  <!-- <audio id="audioPlayer" src="./Hà Anh Tuấn - Tháng Tư Là Lời Nói Dối Của Em (Official MV).mp3"></audio> -->
+
+  <script>
+    document.getElementById("playButton").addEventListener("click", () => {
+      alert("Anh thật sự xin lỗi...");
+      // Nếu sau này bạn có file nhẹ hơn, thêm đoạn sau:
+      // document.getElementById("audioPlayer").play();
     });
-</script>
-<script src="./script.js"></script>
+  </script>
+
 </body>
 
 </html>
